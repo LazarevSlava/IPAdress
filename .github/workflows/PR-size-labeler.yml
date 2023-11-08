@@ -50,7 +50,7 @@ jobs:
           echo "description=$description" >> $GITHUB_OUTPUT
       - name: Check if label has changed
         id: check_if_label_changed
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
