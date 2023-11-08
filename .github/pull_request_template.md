@@ -5,7 +5,7 @@
 <!-- Example: -->
 
 # Changed
-- A new component ToggleTodo was added
+- A new component ToggleTodo was added.
 
 <!-- END_CHANGELOG -->
 
