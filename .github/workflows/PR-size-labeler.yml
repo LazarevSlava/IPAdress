@@ -55,7 +55,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const pr_number = context.payload.pull_request.number;
-            const existing_labels = await github.issues.listLabelsOnIssue({
+            const existing_labels = await github.rest.issues.listLabelsOnIssue({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr_number
@@ -72,13 +72,13 @@ jobs:
             core.setOutput("has_changed", has_changed);
       - name: Remove Label
         if: ${{ steps.check_if_label_changed.outputs.has_changed == 'true' }}
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const pr_number = context.payload.pull_request.number;
             const current_label = '${{ steps.check_if_label_changed.outputs.current_label }}';
-            const response = await github.issues.removeLabel({
+            const response = await github.rest.issues.removeLabel({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr_number,
@@ -86,7 +86,7 @@ jobs:
             });
       - name: Add Label
         if: ${{ steps.check_if_label_changed.outputs.has_changed == 'true' }} && ${{ steps.check_if_label_changed.outputs.current_label != steps.select_label.outputs.label }}
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -95,14 +95,14 @@ jobs:
             const color = '${{ steps.select_label.outputs.color }}';
             const description = '${{ steps.select_label.outputs.description }}';
             // Check if the label already exists
-            const existingLabel = await github.issues.getLabel({
+            const existingLabel = await github.rest.issues.getLabel({
               owner: context.repo.owner,
               repo: context.repo.repo,
               name: label
             }).catch(error => {
               if (error.status === 404) {
                 // Label doesn't exist, create a new one
-                return github.issues.createLabel({
+                return github.rest.issues.createLabel({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   name: label,
@@ -115,7 +115,7 @@ jobs:
               }
             });
             // Add the label to the issue/PR
-            await github.issues.addLabels({
+            await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr_number,
