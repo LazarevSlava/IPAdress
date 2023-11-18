@@ -7,7 +7,7 @@ html{
 body{
   margin: 0;
 }
-.Search{
+.search{
   width: 1000px;
   height: 300px;display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ body{
   border-radius: 10px 0 0 10px;
   
 }
-.request{
+/* .request{
   background-color: black;
   height: 70px;
   width: 10%;
@@ -33,7 +33,7 @@ body{
   cursor: pointer;
   border-radius: 0 10px 10px 0;
 
-}
+} */
 .request:hover{
   background-color: maroon;
 }
