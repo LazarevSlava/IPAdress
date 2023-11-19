@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import  Button  from './Button.jsx';
+import Button from '../button/Button.jsx';
 
 function Search(props) {
   const [inputValue, setInputValue] = useState('');
-  console.log(inputValue,setInputValue);
 
   const handleButtonClick = () => {
-    console.log('handleButtonClick',props);
     if (props.onSearch) {
       props.onSearch(inputValue);
     }
@@ -17,7 +15,7 @@ function Search(props) {
       <input
         className="input"
         type="text"
-        placeholder={props.placeholder || "Search for any IP address or domain"}
+        placeholder={'Search for any IP address or domain'}
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
