@@ -1,0 +1,43 @@
+
+.infoPanel{
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: white;
+    display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+bottom: calc(-50% + 75px);
+right: calc(50% - 400px);
+border: 1px solid black;
+border-radius: 10px;
+}
+.IPAddress{
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    
+}
+hr{
+    rotate: 90deg;
+    width: 50%;
+}
+.location{
+    padding: 20px;
+    width: 200px;
+    height: 150px;  
+}
+.timezone{
+    padding: 20px;
+    width: 200px;
+    height: 150px;  
+}
+.ISP{
+    padding: 20px;
+    width: 200px;
+    height: 150px;  
+}
+    
+
+
+

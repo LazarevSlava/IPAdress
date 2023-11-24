@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '../button/Button.jsx';
+import style from './search.module.scss';
 
 function Search(props) {
   const [inputValue, setInputValue] = useState('');
@@ -11,9 +12,9 @@ function Search(props) {
   };
 
   return (
-    <div className="search">
+    <div className={style.search}>
       <input
-        className="input"
+        className={style.input}
         type="text"
         placeholder={'Search for any IP address or domain'}
         value={inputValue}
@@ -21,7 +22,7 @@ function Search(props) {
       />
       <Button onClick={handleButtonClick}>
         <svg
-          className="arrow"
+          className={style.arrow}
           xmlns="http://www.w3.org/2000/svg"
           height="2em"
           viewBox="0 0 320 512"
