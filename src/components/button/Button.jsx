@@ -1,11 +1,11 @@
-import style from './button.module.scss'; 
+import style from './button.module.scss';
 
-
-function Button ({children, onClick}) {
+function Button({ children, onClick }) {
   return (
-    <button className={style.request} onClick={onClick}>{children}</button>
-  )
+    <button className={style.request} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
 
-export default Button
-
+export default Button;

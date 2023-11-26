@@ -1,12 +1,12 @@
-*{
+* {
   box-sizing: border-box;
 }
-html{
+html {
   font-size: 10px;
 }
-body{
+body {
   margin: 0;
 }
-.header{
-position: relative;
+.header {
+  position: relative;
 }
