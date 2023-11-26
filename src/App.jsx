@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='header'>
     <Search onSearch={handleSearch} />
-  <Map />
+  <Map ip="mmm" location='mmm' timezone='mmm' isp='mmm'/>
   </div>
 )
   }
