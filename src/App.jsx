@@ -7,11 +7,11 @@ function App() {
     console.log(value);
   };
   return (
-    <div className='header'>
-    <Search onSearch={handleSearch} />
-  <Map />
-  </div>
-)
-  }
+    <div className="header">
+      <Search onSearch={handleSearch} />
+      <Map />
+    </div>
+  );
+}
 
 export default App;
