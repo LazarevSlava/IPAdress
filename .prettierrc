@@ -3,7 +3,7 @@
   "singleQuote": true,
   "arrowParens": "always",
   "bracketSpacing": true,
-  // "editorconfig": true,
+  "editorconfig": true,
   "jsxSingleQuote": false,
   "printWidth": 100,
   "tabWidth": 2,
