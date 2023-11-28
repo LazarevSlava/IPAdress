@@ -11,8 +11,10 @@
     right: calc(50% - 400px);
     border: 1px solid black;
     border-radius: 10px;
+    z-index: 3000;
   }
   .IPAddress {
+    text-align: center;
     padding: 20px;
     width: 200px;
     height: 150px;
