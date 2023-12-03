@@ -1,7 +1,7 @@
 import './App.css';
 import Search from './components/search_form/Search.jsx';
 import InfoPanel from './components/InfoPanel/InfoPanel.jsx';
-import Leaflet_map from './components/leaflet/Leaflet_map';
+import LeafletMap from './components/leaflet/LeafletMap';
 
 const isLoading = false;
 
@@ -16,7 +16,7 @@ function App() {
         <Search onSearch={handleSearch} />
         <InfoPanel ip="mmm" location="mmm" timezone="mmm" isp="mmm" isLoading={isLoading} />
       </div>
-      <Leaflet_map coordinates={coordinates} />
+      <LeafletMap coordinates={coordinates} />
     </div>
   );
 }

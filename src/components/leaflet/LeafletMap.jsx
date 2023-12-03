@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import style from './leaflet.module.scss';
 
-const Leaflet_map = (props) => {
+const LeafletMap = (props) => {
   return (
     <MapContainer
       className={style.mapCont}
@@ -19,4 +19,4 @@ const Leaflet_map = (props) => {
   );
 };
 
-export default Leaflet_map;
+export default LeafletMap;
