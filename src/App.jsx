@@ -1,6 +1,6 @@
 import './App.css';
-import Search from './components/search_form/Search.jsx';
-import Map from './components/map/map.jsx';
+import Search from './components/search_form/Search';
+import Map from './components/map/map';
 
 function App() {
   const handleSearch = (value) => {
