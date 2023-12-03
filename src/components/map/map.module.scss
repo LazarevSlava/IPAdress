@@ -1,43 +1,43 @@
 .infoPanel {
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: calc(-50% + 75px);
-    right: calc(50% - 400px);
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-  .IPAddress {
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-  }
-  hr {
-    height: 100px;
-  }
-  .location {
-    text-align: center;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-  }
-  .timezone {
-    text-align: center;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-  }
-  .ISP {
-    text-align: center;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-  }
-.params{
-    text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: calc(-50% + 75px);
+  right: calc(50% - 400px);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.IPAddress {
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+hr {
+  height: 100px;
+}
+.location {
+  text-align: center;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+.timezone {
+  text-align: center;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+.ISP {
+  text-align: center;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+.params {
+  text-align: center;
 }

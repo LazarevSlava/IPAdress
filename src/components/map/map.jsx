@@ -7,11 +7,11 @@ function App() {
     console.log(value);
   };
   return (
-    <div className='header'>
-    <Search onSearch={handleSearch} />
-  <Map ip="mmm" location='mmm' timezone='mmm' isp='mmm'/>
-  </div>
-)
-  }
+    <div className="header">
+      <Search onSearch={handleSearch} />
+      <Map ip="mmm" location="mmm" timezone="mmm" isp="mmm" />
+    </div>
+  );
+}
 
 export default App;
