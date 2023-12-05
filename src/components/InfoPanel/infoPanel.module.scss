@@ -3,6 +3,7 @@
   font-weight: bold;
   background-color: white;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -10,6 +11,8 @@
   right: calc(50% - 400px);
   border: 1px solid black;
   border-radius: 10px;
+  z-index: 3000;
+  text-align: center;
 }
 .IPAddress {
   padding: 20px;
@@ -17,8 +20,7 @@
   height: 150px;
 }
 hr {
-  rotate: 90deg;
-  width: 50%;
+  height: 100px;
 }
 .location {
   padding: 20px;
