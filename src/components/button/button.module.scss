@@ -9,3 +9,9 @@
 .request:hover {
   background-color: maroon;
 }
+@media (max-width: 475px) {
+  .request {
+    border-radius: 0 0 10px 10px;
+    width: 80%;
+  }
+}
