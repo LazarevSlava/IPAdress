@@ -10,14 +10,7 @@ function App() {
   const coordinates = [51.505, -0.09];
   return (
     <div>
-      <Header
-        ip="mmm"
-        location="mmm"
-        timezone="mmm"
-        isp="mmm"
-        isLoading={isLoading}
-        onSearch={handleSearch}
-      />
+      <Header isLoading={isLoading} onSearch={handleSearch} />
       <LeafletMap coordinates={coordinates} />
     </div>
   );
