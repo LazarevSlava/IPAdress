@@ -12,7 +12,7 @@ function Search(props) {
   };
 
   return (
-    <div className={style.search}>
+    <div className={style.search_bar}>
       <input
         className={style.input}
         type="text"

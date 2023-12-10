@@ -1,8 +1,6 @@
 import './App.css';
-import Search from './components/search_form/Search.jsx';
-import InfoPanel from './components/InfoPanel/InfoPanel.jsx';
 import LeafletMap from './components/leaflet/LeafletMap';
-
+import Header from './components/header/Header';
 const isLoading = false;
 
 function App() {
@@ -12,10 +10,7 @@ function App() {
   const coordinates = [51.505, -0.09];
   return (
     <div>
-      <div className="header">
-        <Search onSearch={handleSearch} />
-        <InfoPanel ip="mmm" location="mmm" timezone="mmm" isp="mmm" isLoading={isLoading} />
-      </div>
+      <Header isLoading={isLoading} onSearch={handleSearch} />
       <LeafletMap coordinates={coordinates} />
     </div>
   );
