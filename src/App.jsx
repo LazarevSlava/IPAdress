@@ -8,6 +8,7 @@ function App() {
     console.log(value);
   };
   const coordinates = [51.505, -0.09];
+
   return (
     <div>
       <Header isLoading={isLoading} onSearch={handleSearch} />
