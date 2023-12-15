@@ -14,5 +14,23 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react/prop-types': 'off',
+    'padding-line-between-statements': [
+      'warn',
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: ['return', 'export', 'throw'],
+      },
+      {
+        blankLine: 'always',
+        prev: 'directive',
+        next: 'directive',
+      },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: ['multiline-block-like', 'multiline-expression', 'multiline-const', 'multiline-let'],
+      },
+    ],
   },
 };
