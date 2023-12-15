@@ -11,6 +11,7 @@ function Search(props) {
       setInputValue('');
     }
   };
+
   const handlerKeyDown = (event) => {
     if (event.key === 'Enter') {
       handleButtonClick();

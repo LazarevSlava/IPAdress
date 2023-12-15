@@ -23,6 +23,7 @@ function App() {
   const handleSearch = async (newSearchTerm) => {
     if (!regExpIp.test(newSearchTerm)) {
       alert('IP address is not correct');
+
       return;
     }
     setLoading(true);
