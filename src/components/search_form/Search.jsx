@@ -8,6 +8,12 @@ function Search(props) {
   const handleButtonClick = () => {
     if (props.onSearch) {
       props.onSearch(inputValue);
+      setInputValue('');
+    }
+  };
+  const handlerKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleButtonClick();
     }
   };
 
@@ -19,8 +25,9 @@ function Search(props) {
         placeholder={'Search for any IP address or domain'}
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        onKeyDown={handlerKeyDown}
       />
-      <Button onClick={handleButtonClick}>
+      <Button className={style.but} onClick={handleButtonClick}>
         <svg
           className={style.arrow}
           xmlns="http://www.w3.org/2000/svg"
