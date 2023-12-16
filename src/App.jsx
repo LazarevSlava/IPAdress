@@ -17,8 +17,6 @@ const regExpIp = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)(\.(?!$)|$)){4}$/;
 function App() {
   const [isLoading, setLoading] = useState(false);
   const [geoInfo, setGeoInfo] = useState(initialGeoInfo);
-  // const [error, setError] = useState(null);
-  console.log(geoInfo);
 
   const handleSearch = async (newSearchTerm) => {
     if (!regExpIp.test(newSearchTerm)) {
@@ -30,13 +28,10 @@ function App() {
 
     try {
       const data = await fetchLocation(newSearchTerm);
-
-      // fetchLocation(newSearchTerm).then(res => {}).catch(err => {})
       const newGeoInfo = transformGeoInfo(data);
       setGeoInfo(newGeoInfo);
     } catch (error) {
-      // setError(error);
-      console.error(this.state.error.message);
+      console.error(error.message);
     }
     setLoading(false);
   };

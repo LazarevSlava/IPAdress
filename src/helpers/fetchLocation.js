@@ -1,4 +1,4 @@
-const myKey = 'at_vEhT0ZnWw5eYL3XlfArBnWieonjhS';
+const myKey = import.meta.env.VITE_MY_SECRET_KEY;
 
 export async function fetchLocation(ip) {
   const response = await fetch(
