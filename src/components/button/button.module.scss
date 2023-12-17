@@ -2,14 +2,14 @@
 .request {
   background-color: black;
   height: 70px;
-  width: 10%;
+  width: 80%;
   border: none;
   cursor: pointer;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 0 10px 10px;
 
-  @media ($mobil) {
-    border-radius: 0 0 10px 10px;
-    width: 80%;
+  @media ($mobile) {
+    border-radius: 0 10px 10px 0;
+    width: 20%;
   }
   &:hover {
     background-color: maroon;

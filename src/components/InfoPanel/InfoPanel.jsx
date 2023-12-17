@@ -4,28 +4,28 @@ import Preloader from '../preloader/Preloader';
 const InfoPanel = ({ isLoading, ip, country, timezone, isp }) => {
   return isLoading ? (
     <div className={style.infoPanel}>
-      <div className={style.IPAddress}>
+      <div className={style.block}>
         IP ADDRESS
         <h3 className={style.params}>
           <Preloader />
         </h3>
       </div>
       <hr />
-      <div className={style.location}>
+      <div className={style.block}>
         LOCATION
         <h3 className={style.params}>
           <Preloader />
         </h3>
       </div>
       <hr />
-      <div className={style.timezone}>
+      <div className={style.block}>
         TIMEZONE
         <h3 className={style.params}>
           <Preloader />
         </h3>
       </div>
       <hr />
-      <div className={style.ISP}>
+      <div className={style.block}>
         ISP
         <h3 className={style.params}>
           <Preloader />
@@ -34,21 +34,21 @@ const InfoPanel = ({ isLoading, ip, country, timezone, isp }) => {
     </div>
   ) : (
     <div className={style.infoPanel}>
-      <div className={style.IPAddress}>
+      <div className={style.block}>
         IP ADDRESS
         <h3 className={style.params}>{ip ? ip : '-'}</h3>
       </div>
       <hr />
-      <div className={style.location}>
+      <div className={style.block}>
         LOCATION
         <h3 className={style.params}>{country ? country : '-'}</h3>
       </div>
       <hr />
-      <div className={style.timezone}>
+      <div className={style.block}>
         TIMEZONE<h3 className={style.params}>{timezone ? timezone : '-'}</h3>
       </div>
       <hr />
-      <div className={style.ISP}>
+      <div className={style.block}>
         ISP
         <h3 className={style.params}>{isp ? isp : '-'}</h3>
       </div>
