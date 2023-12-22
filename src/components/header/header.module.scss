@@ -1,8 +1,9 @@
 @import '../utils/index.scss';
 .finder {
-  background: url(../../../images/pattern-bg-desktop.png);
+  padding: 5rem 1.5rem;
+  background: url(../../assets/images/pattern-bg-mobile.png);
+  background-repeat: no-repeat;
   background-size: cover;
-  padding: 3rem 1.5rem;
   text-align: center;
   position: relative;
   height: 300px;
@@ -10,8 +11,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media ($desktop) {
-    padding: 5rem 1.5rem;
+  @media ($tablet) {
+    background: url(../../assets/images/pattern-bg-desktop.png);
+    background-size: cover;
+    padding: 3rem 1.5rem;
   }
 }
 
