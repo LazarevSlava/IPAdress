@@ -27,6 +27,9 @@
   width: 75px;
   min-height: 100px;
   font-size: 1rem;
+  & p {
+    margin-bottom: 20px;
+  }
   @media ($mobile) {
     padding: 20px 0;
     width: 120px;
@@ -36,10 +39,11 @@
     width: 150px;
   }
 }
+
 hr {
   margin: 20px 0;
   max-height: 100px;
 }
 .params {
-  margin: 10px 5px;
+  margin: 0 5px;
 }
