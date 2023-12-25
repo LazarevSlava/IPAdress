@@ -2,14 +2,22 @@ import { useState } from 'react';
 import Button from '../button/Button.jsx';
 import style from './search.module.scss';
 
+const regExpIp = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)(\.(?!$)|$)){4}$/;
+
 function Search(props) {
   const [inputValue, setInputValue] = useState('');
 
   const handleButtonClick = () => {
+    if (!regExpIp.test(inputValue)) {
+      alert('Invalid IP address format. Please enter a valid IP address.\nExample: 192.168.1.1');
+
+      return;
+    }
+
     if (props.onSearch) {
       props.onSearch(inputValue);
-      setInputValue('');
     }
+    setInputValue('');
   };
 
   const handlerKeyDown = (event) => {

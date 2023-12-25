@@ -1,7 +1,7 @@
 @import '../utils/index.scss';
 .request {
   background-color: black;
-  height: 70px;
+  height: 50px;
   width: 80%;
   border: none;
   cursor: pointer;
@@ -10,6 +10,7 @@
   @media ($mobile) {
     border-radius: 0 10px 10px 0;
     width: 100px;
+    height: 70px;
   }
   &:hover {
     background-color: maroon;
