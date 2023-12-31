@@ -12,21 +12,20 @@
   overflow-wrap: break-word;
   bottom: -70px;
   right: auto;
+  padding: 20px 5px;
   @media ($mobile) {
     bottom: -70px;
     min-height: 120px;
     right: auto;
   }
   @media ($tablet) {
-    bottom: -60px;
     right: auto;
   }
 }
 .block {
-  padding: 20px 3px;
   width: 75px;
-  min-height: 100px;
-  font-size: 1rem;
+  min-height: 80px;
+  font-size: 0.8rem;
   & p {
     margin-bottom: 20px;
   }
@@ -41,9 +40,12 @@
 }
 
 hr {
-  margin: 20px 0;
-  max-height: 100px;
+  max-height: 130px;
 }
 .params {
-  margin: 0 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
