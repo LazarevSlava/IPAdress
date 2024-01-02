@@ -12,18 +12,12 @@ const initialGeoInfo = {
   timezone: '',
   coordinates: [51.505, -0.09],
 };
-const regExpIp = /^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)(\.(?!$)|$)){4}$/;
 
 function App() {
   const [isLoading, setLoading] = useState(false);
   const [geoInfo, setGeoInfo] = useState(initialGeoInfo);
 
   const handleSearch = async (newSearchTerm) => {
-    if (!regExpIp.test(newSearchTerm)) {
-      alert('IP address is not correct');
-
-      return;
-    }
     setLoading(true);
 
     try {

@@ -5,28 +5,28 @@ const InfoPanel = ({ isLoading, ip, country, timezone, isp }) => {
   return isLoading ? (
     <div className={style.infoPanel}>
       <div className={style.block}>
-        IP ADDRESS
+        <p>IP ADDRESS</p>
         <h3 className={style.params}>
           <Preloader />
         </h3>
       </div>
       <hr />
       <div className={style.block}>
-        LOCATION
+        <p>LOCATION</p>
         <h3 className={style.params}>
           <Preloader />
         </h3>
       </div>
       <hr />
       <div className={style.block}>
-        TIMEZONE
+        <p>TIMEZONE</p>
         <h3 className={style.params}>
           <Preloader />
         </h3>
       </div>
       <hr />
       <div className={style.block}>
-        ISP
+        <p>ISP</p>
         <h3 className={style.params}>
           <Preloader />
         </h3>
@@ -35,21 +35,22 @@ const InfoPanel = ({ isLoading, ip, country, timezone, isp }) => {
   ) : (
     <div className={style.infoPanel}>
       <div className={style.block}>
-        IP ADDRESS
+        <p>IP ADDRESS</p>
         <h3 className={style.params}>{ip ? ip : '-'}</h3>
       </div>
       <hr />
       <div className={style.block}>
-        LOCATION
+        <p>LOCATION</p>
         <h3 className={style.params}>{country ? country : '-'}</h3>
       </div>
       <hr />
       <div className={style.block}>
-        TIMEZONE<h3 className={style.params}>{timezone ? timezone : '-'}</h3>
+        <p>TIMEZONE</p>
+        <h3 className={style.params}>{timezone ? timezone : '-'}</h3>
       </div>
       <hr />
       <div className={style.block}>
-        ISP
+        <p>ISP</p>
         <h3 className={style.params}>{isp ? isp : '-'}</h3>
       </div>
     </div>
